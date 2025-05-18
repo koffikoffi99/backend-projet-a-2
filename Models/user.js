@@ -15,12 +15,17 @@ const userSchema = new Schema({
         unique: true,
         match: [/.+\@.+\..+/, "Email invalide"]
     },
-    mobile: {
-        type: String
+    telephone: {
+        type: String,
+        required: true,
+        match: [/^\+225\d{10}$/, "Le numéro de téléphone doit commencer par +225 et contenir 10 chiffres."]
     },
-    dn: {
-        type: String
-    },
+
+    date: {
+        type: Date,
+        required: true
+    }
+    ,
     genre: {
         type: String
     },
