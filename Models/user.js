@@ -17,8 +17,7 @@ const userSchema = new Schema({
     },
     telephone: {
         type: String,
-        required: true,
-        match: [/^\+225\d{10}$/, "Le numéro de téléphone doit commencer par +225 et contenir 10 chiffres."]
+        required: true
     },
 
     date: {
